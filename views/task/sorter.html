@@ -1,0 +1,5 @@
+<ul class="list-inline">
+    {% for link, label in sorter.getLinks() %}
+        <li class="list-inline-item"><a href="{{link}}" class="btn btn-secondary">{{label}}</a></li>
+    {% endfor %}
+</ul>

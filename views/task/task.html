@@ -1,0 +1,11 @@
+<div class="card">
+    <h5 class="card-header">{{task.title}}</h5>
+    <div class="card-body">
+        <h5 class="card-title">{{task.author}} ({{task.email}})</h5>
+        <p class="card-text">{{task.text}}</p>
+        <p class="card-text">DONE: {{task.status ? 'YES' : 'NO' }}</p>
+        {% if isAdmin %}
+            <a href="{{ task.getUpdateLink() }}" class="btn btn-primary">Update</a>
+        {% endif %}
+    </div>
+</div>

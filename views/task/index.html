@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+{{title | default('Beejee tasks')}}
+{% endblock %}
+
+{% block header %}
+Tasks list
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{{ router.createUrl('task/create') }}" class="btn btn-primary">Create task</a>
+            </div>
+            <div class="col-6">
+                {% if tasks %}
+                    {{ include('task/sorter.html') }}
+                {% endif %}
+            </div>
+            <div class="col">
+                {% if isAdmin %}
+                    <a href="{{ router.createUrl('app/logout') }}" class="btn btn-primary">Logout</a>
+                {% else %}
+                    <a href="{{ router.createUrl('app/login') }}" class="btn btn-primary">Login</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                {% for task in tasks %}
+                    {{ include('task/task.html') }}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                {% if tasks %}
+                    {{ include('task/pager.html') }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

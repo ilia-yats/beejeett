@@ -1,0 +1,8 @@
+<ul class="list-inline">
+    {% if paginator.hasPrevPage %}
+        <li class="list-inline-item"><a href="{{ paginator.getPrevPageLink() }}" class="btn btn-secondary">Previous</a></li>
+    {% endif %}
+    {% if paginator.hasNextPage %}
+        <li class="list-inline-item"><a href="{{ paginator.getNextPageLink() }}" class="btn btn-secondary">Next</a></li>
+    {% endif %}
+</ul>

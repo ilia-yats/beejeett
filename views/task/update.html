@@ -1,0 +1,15 @@
+{% extends "layouts/main.html" %}
+
+{% block title %}
+Create task
+{% endblock %}
+
+{% block header %}
+Update task {{task.title}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% include('task/form.html') %}
+</div>
+{% endblock %}

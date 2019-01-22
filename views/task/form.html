@@ -1,0 +1,32 @@
+<form action="" method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input required type="text" name="title" class="form-control" id="title" placeholder="Enter title"
+            value="{{task.title}}">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input required type="email" name="email" class="form-control" id="email" placeholder="Email"
+            value="{{task.email}}">
+    </div>
+    <div class="form-group">
+        <label for="author">Author Name</label>
+        <input required type="text" name="author" class="form-control" id="author" placeholder="Author Name"
+            value="{{task.author}}">
+    </div>
+    <div class="form-group">
+        <label for="text">Description</label>
+        <input required type="text" name="text" class="form-control" id="text" placeholder="Description"
+            value="{{task.text}}">
+    </div>
+
+    {% if isAdmin %}
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="checkbox" name="status" class="form-control" id="status"
+                value="{{task.status}}">
+        </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

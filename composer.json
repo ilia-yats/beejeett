@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "^2.0",
+        "aura/auth": "^2.0",
+        "aura/sql": "^3.0"
+    }
+}
