@@ -94,11 +94,11 @@ class Application
 
     private function createPdo(): ExtendedPdo
     {
-        if (empty($this->config['dsn'])) {
-            throw new ConfigException('App config must contain dsn for database connection.');
+        if (!isset($this->config['dsn'], $this->config['dbUser'], $this->config['dbPass'])) {
+            throw new ConfigException('App config must contain dsn, user and pass for database connection.');
         }
 
-        return new ExtendedPdo($this->config['dsn']);
+        return new ExtendedPdo($this->config['dsn'], $this->config['dbUser'], $this->config['dbPass']);
     }
 
     /**
