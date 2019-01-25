@@ -7,7 +7,7 @@ class Paginator
 {
     const PAGE_PARAM = 'p';
 
-    const PAGE_ITEMS = 1;
+    const PAGE_ITEMS = 3;
 
     public $hasNextPage;
 

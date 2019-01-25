@@ -1,6 +1,6 @@
 ## MVC task demo application
 
-_Instruction:_
+_Instruction (for local deployment):_
 
 1) import sqlite table from dump: **`cat data/dump.sql | sqlite data/db.sq3`**
 2) go to web root **`cd web`**
