@@ -46,7 +46,7 @@ class Router
     {
         $params[self::ROUTE_PARAM] = $route;
 
-        return '/?' . http_build_query($params);
+        return '?' . http_build_query($params);
     }
 
     public function complementUrl(array $params): string
