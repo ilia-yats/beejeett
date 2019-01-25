@@ -1,2 +1,2 @@
 release
-web: vendor/bin/heroku-php-nginx -C nginx.conf
+web: vendor/bin/heroku-php-nginx
