@@ -13,7 +13,7 @@ class View
     {
         $loader = new Twig_Loader_Filesystem(APP_ROOT.'/views');
         $this->twigEnv = new Twig_Environment($loader, [
-            'cache' => APP_ROOT.'/runtime/twig_cache',
+            //'cache' => APP_ROOT.'/runtime/twig_cache',
         ]);
     }
 
