@@ -68,6 +68,7 @@ class TaskController extends Controller
         }
 
         return $this->render('update', [
+            'isAdmin' => $isAdmin,
             'task' => $task,
         ]);
     }
