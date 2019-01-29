@@ -23,8 +23,10 @@
     {% if isAdmin %}
         <div class="form-group">
             <label for="status">Status</label>
-            <input type="checkbox" {% if task.status %} checked {% endif %} name="status" class="form-control" id="status"
-                value="1">
+            <select name="status" id="status" class="form-control">
+                <option value="0" {% if task.status == 0 %} selected {% endif %}>TODO</option>
+                <option value="1" {% if task.status == 1 %} selected {% endif %}>DONE</option>
+            </select>
         </div>
     {% endif %}
 
